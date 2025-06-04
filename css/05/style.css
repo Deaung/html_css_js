@@ -1,0 +1,73 @@
+html{ 
+    font-size: 62.5%;
+}
+
+.search_box{
+    border: 0.1rem solid black;
+    width: fit-content;
+    border-radius: 0.4rem;
+    padding: 0.3rem;
+
+    & input {
+        border: none;
+        outline: none;
+    }
+}
+
+.search_box2 {
+    position: relative;
+    width: fit-content;
+
+    & input{
+        box-sizing: border-box;
+        height: 3.3;
+        padding-right: 4.5
+    }
+
+    & button {
+        position: absolute;
+        right: 0.5rem;
+        border-radius: 50%;
+        font-size: 0.6rem;
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.p_box {
+    position: relative;
+    box-sizing: border-box;
+    border: 0.1rem solid black;
+    width: 50rem;
+    height: 30rem;
+}
+
+.c-box {
+    block-size: border-box;
+    border: 0.1rem solid black;
+    width: 10rem;
+    height: 10rem;
+}
+
+
+.c-box1 {
+    background-color: red;
+}
+
+.c-box2 {
+    background-color: green;
+}
+
+.c-box3 {
+    background-color: blue;
+}
+
+.ccbox {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    border: 0.1rem solid black;
+    width: 5rem;
+    height: 5rem;
+    background-color: chartreuse;
+}
