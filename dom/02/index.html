@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & > div {
+                box-sizing: border-box;
+                border: 1px solid #000;
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxs">
+
+        <div class="box1">
+    
+        </div>
+        <div class="box2">
+    
+        </div>
+    </div>
+    <div class="buttons">
+        <input type="text" class="color-input" placeholder="1번 박스 생성">
+        <input type="text" class="color-input" palaceholder="2번 박스 생성">
+        <button class="submit">적용</button>
+        <button class="reset">초기화</button>
+    </div>
+
+
+    <script>
+        let head =null;
+        window.onload = () => {
+            headHtml = document.querySelector("head").innerHTML;
+        }
+
+        const submitButton = document.querySelector(".submit")
+        submitButton.onclick = () =>{
+            const colorIputs = document.querySelectorAll(".color-input");
+            const colorInputLeftValue = colorIputs[0].value || "#ffffff";
+            const colorInputRightValue = colorIputs[1].value || "#ffffff";
+            const head = document.querySelector("head")
+            head.innerHTML = headHtml
+            head.innerHTML += `<style>
+                .box1{
+                    background-color : ${colorInputLeftValue};
+                }
+                .box2{
+                    background-color : ${colorInputRightValue};
+                }
+                </style>`
+        }
+        const resetButton = document.querySelector(".reset")
+        resetButton.onclick = () => {
+            const head = document.querySelector("head")
+            head.innerHTML = headHtml
+
+        }
+    </script>
+</body>
+</html>
